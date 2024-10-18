@@ -11654,7 +11654,7 @@
             // and a fast fade-in for non progressively loaded scenes.
             // SceneRevealMode.Gradual will force a slow fade-in for all scenes.
             // SceneRevealMode.Instant will force all loaded scene data to be immediately visible.
-            this.sceneRevealMode = options.sceneRevealMode || SceneRevealMode.Default;
+            this.sceneRevealMode = options.sceneRevealMode || SceneRevealMode.Gradual;
 
             // Hacky, experimental, non-scientific parameter for tweaking focal length related calculations. For scenes with very
             // small gaussians, small details, and small dimensions -- increasing this value can help improve visual quality.
@@ -11719,7 +11719,7 @@
             this.splatRenderMode = options.splatRenderMode;
 
             // Customize the speed at which the scene is revealed
-            this.sceneFadeInRateMultiplier = options.sceneFadeInRateMultiplier || 1.0;
+            this.sceneFadeInRateMultiplier = options.sceneFadeInRateMultiplier || .5;
 
             // Set the range for the depth map for the counting sort used to sort the splats
             this.splatSortDistanceMapPrecision = options.splatSortDistanceMapPrecision || Constants.DefaultSplatSortDistanceMapPrecision;
@@ -12895,7 +12895,7 @@
                     }
                     this.disposeSortWorker();
                     this.splatMesh.dispose();
-                    this.sceneRevealMode = SceneRevealMode.Instant;
+                    this.sceneRevealMode = SceneRevealMode.Gradual;
                     this.createSplatMesh();
                     this.addSplatBuffers(savedSplatBuffers, savedSceneOptions, true, false, true)
                     .then(() => {
