@@ -5530,7 +5530,7 @@ class LoadingSpinner {
             }
 
             .spinner${this.elementID} {
-                padding: 13px;
+                padding: 16px;
                 background: #e8e4da;
                 z-index:99999;
             
@@ -5564,7 +5564,7 @@ class LoadingSpinner {
             }
 
             .spinnerPrimary${this.elementID} {
-                width: 75px;
+                width: 120px;
                 margin-left: 30px;
             }
 
