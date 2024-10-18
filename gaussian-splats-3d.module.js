@@ -11697,7 +11697,7 @@ class Viewer {
         this.splatRenderMode = options.splatRenderMode;
 
         // Customize the speed at which the scene is revealed
-        this.sceneFadeInRateMultiplier = options.sceneFadeInRateMultiplier || .5;
+        this.sceneFadeInRateMultiplier = options.sceneFadeInRateMultiplier || .2;
 
         // Set the range for the depth map for the counting sort used to sort the splats
         this.splatSortDistanceMapPrecision = options.splatSortDistanceMapPrecision || Constants.DefaultSplatSortDistanceMapPrecision;
