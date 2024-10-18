@@ -11654,7 +11654,7 @@
             // and a fast fade-in for non progressively loaded scenes.
             // SceneRevealMode.Gradual will force a slow fade-in for all scenes.
             // SceneRevealMode.Instant will force all loaded scene data to be immediately visible.
-            this.sceneRevealMode = options.sceneRevealMode || SceneRevealMode.Gradual;
+            this.sceneRevealMode = options.sceneRevealMode || SceneRevealMode.Instant;
 
             // Hacky, experimental, non-scientific parameter for tweaking focal length related calculations. For scenes with very
             // small gaussians, small details, and small dimensions -- increasing this value can help improve visual quality.
